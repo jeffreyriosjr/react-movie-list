@@ -1,14 +1,12 @@
 
 
 const MovieListComponent = ({ movies }) => {
-    const showDetails = movieId => {
+    const showDetails = moviesId => {
         
-        let foundMovie = movies.find(movie => movie.Id );
+        let foundMovies = movies.find(movies => movies.title);
       
-        if(!foundMovie) {
-            alert('Sorry Could not find your movie!');
-        }   else { 
-                alert(`${foundMovie.title}: This is ${foundMovie.title}`)
+        if(foundMovies) {
+           alert(`${foundMovies.title}`);
             }
         };
     return (
@@ -36,7 +34,7 @@ const MovieListComponent = ({ movies }) => {
             <img src={movie.movieImage}></img>
             
             <td scope="col">
-                <button className="btn btn-info btn-block" onClick={() => showDetails(movie.imdbLink)}>Info</button>
+                <button className="btn btn-info btn-block" onClick={() => showDetails(movies.title)}>Info</button>
              </td>
         </tr>
               
