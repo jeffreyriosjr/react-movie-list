@@ -10,7 +10,7 @@ const MovieListComponent = ({ movies }) => {
             }
         };
     return (
-        <table class="content-table table-dark text-center">
+        <table class=" box content-table table-dark text-center">
   <thead> 
     <tr>
       <th scope="col">Title</th>
@@ -23,7 +23,7 @@ const MovieListComponent = ({ movies }) => {
         {movies.map((movie) => {
         return (
             <tr>
-            <th scope="col-6 offset-3 title">
+            <th scope="col-6 offset-3">
                 <a href={movie.imdbLink} rel='noreferrer' target='_blank'>
                     {movie.title}
                 </a>
