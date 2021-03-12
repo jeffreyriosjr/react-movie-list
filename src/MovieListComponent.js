@@ -10,7 +10,7 @@ const MovieListComponent = ({ movies }) => {
             }
         };
     return (
-        <table class="table table-dark text-center">
+        <table class="content-table table-dark text-center">
   <thead> 
     <tr>
       <th scope="col">Title</th>

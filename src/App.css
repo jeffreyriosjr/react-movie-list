@@ -3,8 +3,11 @@
   background-image: url(./bgPic.png);
   background-position:center;
   background-size: cover;
-  
-  background-attachment: fixed;
+  border-radius: 5px 5px 0 0;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.15);
+  background-attachment:fixed;
+
 
 }
 .col{
@@ -26,18 +29,27 @@ a{
   background-color: #ddd;
 }
 
-.th{
-  text-align: center;
-
+.content-table{
+  
+  border-collapse: collapse;
+  margin: 45px 0;
+  min-width: 800px;
+  font-weight: bold;
+}
+tbody{
+  
+  border-bottom: 21px solid #b58b20;
 }
 
 .table{
+  
   width: 800px;
   font-size: 15px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
   text-shadow: black;
   text-transform: uppercase;
+ 
 }
 
 .App {
