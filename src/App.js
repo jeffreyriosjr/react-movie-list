@@ -1,5 +1,6 @@
 import HeadingComponent from './Heading'
-import MovieListComponent from './MovieListComponent';
+import MovieListComponent from './components/MovieListComponent';
+import MovieFormComponent from './components/MovieForm'
 import 'bootstrap/dist/css/bootstrap.css';
 import Inception from './Inception.png'
 import Interstellar from './Interstellar.png'
@@ -23,7 +24,7 @@ import './App.css';
       title: 'Interstellar',
       year: '2014',
       genre: 'science fiction',
-      movieImage: Interstellar,
+      movieImage: '../public/assets/images/Interstellar.png',
       imdbLink: 'https://www.imdb.com/title/tt0816692/',
     },
     {
@@ -31,7 +32,7 @@ import './App.css';
       title: 'Padmaavat',
       year: '2018',
       genre: 'drama, history, romance',
-      movieImage: Padmaavat,
+      movieImage: '../public/assets/images/Padmaavat.png',
       imdbLink: 'https://www.imdb.com/title/tt5935704/?ref_=nv_sr_srsg_3',
     },
     {
@@ -106,10 +107,7 @@ import './App.css';
     <div className="container">
       <HeadingComponent  title= {title}/>
       <MovieListComponent  movies={movies}/>
-      
-     
-
-      
+      <MovieFormComponent />
     </div>
   );
 };
