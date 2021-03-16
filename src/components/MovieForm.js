@@ -1,5 +1,6 @@
 const MovieFormComponent =() => {
     return(
+        <div className="container text-center">
         <div className='row mb-5'>
             <div className='col-6 offset-3'>
                 <form action='submit' id='movie-form'>
@@ -64,6 +65,7 @@ const MovieFormComponent =() => {
                     <button className='btn btn-warning btn-block'>Save</button>
                 </form>
             </div>
+        </div>
         </div>
     );
 };

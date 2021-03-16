@@ -24,7 +24,7 @@ import './App.css';
       title: 'Interstellar',
       year: '2014',
       genre: 'science fiction',
-      movieImage: '../public/assets/images/Interstellar.png',
+      movieImage: Interstellar,
       imdbLink: 'https://www.imdb.com/title/tt0816692/',
     },
     {
@@ -32,7 +32,7 @@ import './App.css';
       title: 'Padmaavat',
       year: '2018',
       genre: 'drama, history, romance',
-      movieImage: '../public/assets/images/Padmaavat.png',
+      movieImage: Padmaavat,
       imdbLink: 'https://www.imdb.com/title/tt5935704/?ref_=nv_sr_srsg_3',
     },
     {
@@ -105,11 +105,15 @@ import './App.css';
     let title = 'Anna & Jeffreys Movie List!'
   return (
     <div className="container">
-      <HeadingComponent  title= {title}/>
+      <HeadingComponent  title={title}/>
       <MovieListComponent  movies={movies}/>
       <MovieFormComponent />
+      
+      
     </div>
+    
   );
+  
 };
 
 export default App;
