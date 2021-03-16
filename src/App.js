@@ -101,13 +101,21 @@ import './App.css';
     },
   ];
 
-  const App = () => {
-    let title = 'Anna & Jeffreys Movie List!'
+    const App = () => {
+     
+      let title = 'Anna & Jeffreys Movie List!';
+      
+
+    const addNewMovie = movies => {
+    
+   
+      
+    };
   return (
     <div className="container">
       <HeadingComponent  title={title}/>
       <MovieListComponent  movies={movies}/>
-      <MovieFormComponent />
+      <MovieFormComponent addNewMovie={addNewMovie} />
       
       
     </div>
