@@ -51,16 +51,6 @@ const MovieFormComponent =() => {
                             value=''
                             />
                         </div>
-
-                        <div className='form-group'>
-                            <label></label>
-                            <input
-                            type=''
-                            id=''
-                            className='form-control'
-                            value=''
-                            />
-                        </div>
                         
                         <div className='row'>
                             <div className= 'col-6 mx-auto'>
