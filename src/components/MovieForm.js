@@ -61,7 +61,13 @@ const MovieFormComponent =() => {
                         value=''
                         />
                     </div>
-                    <button className='btn btn-warning btn-block'>Save</button>
+                    <div className='row'>
+                        <div className= 'col-4 mx-3'>
+                            <button className='btn btn-success btn-block
+                            '>Save</button>
+                            <button className='btn btn-danger btn-block'>Delete</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
