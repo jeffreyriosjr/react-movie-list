@@ -1,5 +1,6 @@
-import HeadingComponent from './Heading'
+import HeadingComponent from './Heading';
 import MovieListComponent from './components/MovieListComponent';
+import { useState } from 'react';
 import MovieFormComponent from './components/MovieForm'
 import 'bootstrap/dist/css/bootstrap.css';
 import Inception from './Inception.png'
@@ -18,7 +19,7 @@ import './App.css';
 
   
 
-  let movies = [
+  let moviesData = [
     {
       id: 0,
       title: 'Interstellar',
@@ -101,13 +102,19 @@ import './App.css';
     },
   ];
 
-  const App = () => {
-    let title = 'Anna & Jeffreys Movie List!'
+    const App = () => {
+      const [movies, setMovies] = useState(moviesData);
+      let title = 'Anna & Jeffreys Movie List!';
+      
+
+    const addNewMovie = movies => {
+      setMovies([...movies, movies])
+    };
   return (
     <div className="container">
       <HeadingComponent  title={title}/>
       <MovieListComponent  movies={movies}/>
-      <MovieFormComponent />
+      <MovieFormComponent addNewMovie={addNewMovie} />
       
       
     </div>
