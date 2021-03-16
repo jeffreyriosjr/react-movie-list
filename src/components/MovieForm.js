@@ -6,13 +6,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
   const [movieYear, setMovieYear] = useState('');
   const [movieGenre, setMovieGenre] = useState('');
   
-  //   let heroName = '';
-  //   const setHeroName = (value) => {
-  //     //   updates heroName
-  //     heroName += value;
-  //   }
 
-  // initialize my functions
   const handleSubmit = event => {
     event.preventDefault();
     // debugger;
@@ -20,6 +14,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
       title: movieTitle,
       year: movieYear,
       genre: movieGenre,
+      
     };
     console.log(newMovie);
     addNewMovie(newMovie);
@@ -32,53 +27,52 @@ const MovieFormComponent = ({ addNewMovie }) => {
     setMovieGenre('');
     
   };
-  return (
-    <div className='row mb-5'>
-      <div className='col-6 offset-3'>
-        <form action='submit' id='movie-form' onSubmit={handleSubmit}>
-          <div className='form-group'>
-            <label htmlFor='movieTitle'>Movie Title</label>
-            <input
-              type='text'
-              id='movieTitle'
-              className='form-control'
-              value={movieTitle}
-              onChange={event => {
-                setMovieTitle(event.target.value);
-              }}
-            />
-          </div>
-          <div className='form-group'>
-            <label htmlFor='movieYear'>Movie Year</label>
-            <input
-              type='text'
-              className='form-control'
-              id='movieYear'
-              value={movieYear}
-              onChange={event => {
-                setMovieYear(event.target.value);
-              }}
-            />
-          </div>
-          <div className='row'>
-            <div className='form-group col'>
-              <label htmlFor='movieGenre'>Movie Genre</label>
-              <input
-                type='text'
-                id='movieTitle'
-                className='form-control'
-                value={movieGenre}
-                onChange={event => {
-                  setMovieGenre(event.target.value);
-                }}
-              />
+    return(
+            <div className='row mb-5'>
+                <div className='col-6 offset-3'>
+                    <form action='submit' id='movie-form'>
+                        <div className='form-group'>
+                            <label htmlFor='movieTitle'>Title</label>
+                            <input
+                            type=''
+                            id=''
+                            className='form-control'
+                            value=''
+                            />
+                        </div>
+
+                        <div className='form-group'>
+                            <label htmlFor='movieGenre'>Genre</label>
+                            <input
+                            type=''
+                            id=''
+                            className='form-control'
+                            value=''
+                            />
+                        </div>
+
+                        <div className='form-group'>
+                            <label htmlFor='movieYear'>Year</label>
+                            <input
+                            type=''
+                            id=''
+                            className='form-control'
+                            value=''/>
+                        </div>
+
+                        <div className='row'>
+                            <div className= 'col-6 mx-auto'>
+                                <button className='btn btn-success btn-block
+                                '>Save</button>
+                            </div>
+                            <div className='col-6 mx-auto'>
+                                <button className='btn btn-danger btn-block'>Delete</button>
+                            </div>   
+                            </div>
+                    </form>
+                </div>
             </div>
-          </div>
-          <button className='btn btn-primary btn-block'>Save</button>
-        </form>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default MovieFormComponent;

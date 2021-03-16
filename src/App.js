@@ -107,9 +107,7 @@ import './App.css';
       
 
     const addNewMovie = movies => {
-    
-   
-      
+       
     };
   return (
     <div className="container">
