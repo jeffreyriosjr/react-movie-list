@@ -107,8 +107,8 @@ import './App.css';
       let title = 'Anna & Jeffreys Movie List!';
       
 
-    const addNewMovie = movies => {
-      setMovies([...movies, movies])
+    const addNewMovie = movie => {
+      setMovies([...movies, movie])
     };
   return (
     <div className="container">
