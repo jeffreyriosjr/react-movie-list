@@ -73,8 +73,3 @@ const MovieFormComponent = ({ addNewMovie }) => {
 };
 
 export default MovieFormComponent;
-
-
-
-
-

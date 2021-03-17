@@ -1,5 +1,3 @@
-
-
 const MovieListComponent = ({ movies }) => {
     const showDetails = (movieId) => {
         
