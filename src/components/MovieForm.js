@@ -2,30 +2,31 @@ import { useState } from 'react';
 
 const MovieFormComponent = ({ addNewMovie }) => {
   // initialize my variable and state hooks first
-  const [movieTitle, setMovieTitle] = useState('');
-  const [movieYear, setMovieYear] = useState('');
-  const [movieGenre, setMovieGenre] = useState('');
-  const handleSubmit = event => {
+    const [movieTitle, setMovieTitle] = useState('');
+    const [movieYear, setMovieYear] = useState('');
+    const [movieGenre, setMovieGenre] = useState('');
+
+    const handleSubmit = event => {
     event.preventDefault();
-    // debugger;
+    debugger;
     let newMovie = {
-      title: movieTitle,
-      year: movieYear,
-      genre: movieGenre,
+        title: movieTitle,
+        year: movieYear,
+        genre: movieGenre,
     };
-    console.log(newMovie);
-    addNewMovie(newMovie);
-    clearForm();
-  };
-  const clearForm = () => {
+        console.log(newMovie);
+        addNewMovie(newMovie);
+        clearForm();
+    };
+    const clearForm = () => {
     setMovieTitle('');
     setMovieYear('');
     setMovieGenre('');
-  };
+    };
     return(
             <div className='row mb-5'>
                 <div className='col-6 offset-3'>
-                    <form action='submit' id='movie-form'>
+                    <form action='submit' id='movie-form' onSubmit={handleSubmit}>
                         <div className='form-group'>
                             <label htmlFor='movieTitle'>Title</label>
                             <input
@@ -33,6 +34,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             id='movieTitle'
                             className='form-control'
                             value='{movieTitle}'
+                            onChange= {event => {setMovieTitle(event.target.value);}}
                             />
                         </div>
                         <div className='form-group'>
@@ -41,16 +43,18 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             type='text'
                             id='movieGenre'
                             className='form-control'
-                            value=''
+                            value='{movieGenre}'
+                            onChange= {event => {setMovieGenre(event.target.value);}}
                             />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='movieYear'>Year</label>
                             <input
                             type='text'
-                            id='movieGenre'
+                            id='movieYea'
                             className='form-control'
-                            value='{movieGenre}'
+                            value='{movieYear}'
+                            onChange= {event => {setMovieYear(event.target.value);}}
                             />
                         </div>
                         <div className='row'>
