@@ -1,16 +1,12 @@
-
-
 const MovieListComponent = ({ movies }) => {
-    const showDetails = moviesId => {
+    const showDetails = movieId => {
         
-        let foundMovies = movies.find(movies => movies.title);
-      
-        if(foundMovies) {
-           alert(`${foundMovies.title}`);
-            }
-        };
+        let foundMovie = movies.find(movie => movie.id === movieId);
+        alert(`${foundMovie.title}: this movie is about: ${foundMovie.genre}`);
+        
+    };
     return (
-        <table class=" box content-table table-dark text-center">
+        <table className=" box content-table table-dark text-center">
   <thead> 
     <tr>
       <th scope="col">Title</th>
@@ -20,7 +16,7 @@ const MovieListComponent = ({ movies }) => {
   </thead>
   <tbody>
         
-        {movies.map((movie) => {
+        {movies.map((movie, index) => {
         return (
             <tr>
             <th scope="col-6 offset-3">
