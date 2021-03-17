@@ -11,6 +11,8 @@
 
 
 }
+
+
 .col{
 
   
@@ -26,13 +28,15 @@ a{
   color: #b1c2b6;
 }
 
-
+thead{
+  color: white;
+}
 
 .content-table{
   font-size: 13px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
-  text-shadow: black;
+  
   text-transform: uppercase;
   margin: 45px;
   min-width: 800px;
