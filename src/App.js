@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import HeadingComponent from './Heading'
+import HeadingComponent from './Heading';
 import MovieListComponent from './components/MovieListComponent';
+import { useState } from 'react';
 import MovieFormComponent from './components/MovieForm'
+import 'bootstrap/dist/css/bootstrap.css';
 import Inception from './Inception.png'
 import Interstellar from './Interstellar.png'
 import Padmaavat from './Padmaavat.png'
@@ -12,12 +13,13 @@ import VanillaSky from './Vanilla-Sky.png'
 import Pursuit from './Pursuit.png'
 import ToyStory from './toyStory.png'
 import FifthElement from  './5th-element.png'
-import 'bootstrap/dist/css/bootstrap.css';
+
+
 import './App.css';
 
   
 
-  let movies = [
+  let moviesData = [
     {
       id: 0,
       title: 'Interstellar',
@@ -101,34 +103,18 @@ import './App.css';
   ];
 
     const App = () => {
-      const [movies, setMovies] = useState(movies);
-      const [success, setSuccess] = useState(false);
+      const [movies, setMovies] = useState(moviesData);
       let title = 'Anna & Jeffreys Movie List!';
       
 
     const addNewMovie = movie => {
-       setMovies([...movies, movie]);
-       setSuccess(true);
-       setTimeout(() => {
-         setSuccess(false);
-       }, 2000);
+      setMovies([...movies, movie])
     };
   return (
     <div className="container">
-      {success ? (
-        <div className='row'>
-        <div className='col-6 offset-3'>
-          <div className='alert alert-success text-center' role='alert'>
-            You've successfully added a Movie!
-          </div>
-        </div>
-      </div>
-    ) : (
-      ''
-    )}
       <HeadingComponent  title={title}/>
-      <MovieListComponent  movies={movies} />
-      <MovieFormComponent addNewMovie ={addNewMovie} />
+      <MovieListComponent  movies={movies}/>
+      <MovieFormComponent addNewMovie={addNewMovie} />
       
       
     </div>

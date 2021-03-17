@@ -14,14 +14,14 @@ const MovieFormComponent = ({ addNewMovie }) => {
         year: movieYear,
         genre: movieGenre,
     };
-        console.log(newMovie);
+        //console.log(newMovie);
         addNewMovie(newMovie);
         clearForm();
     };
     const clearForm = () => {
-    setMovieTitle('');
-    setMovieYear('');
-    setMovieGenre('');
+        setMovieTitle('');
+        setMovieYear('');
+        setMovieGenre('');
     };
     return(
             <div className='row mb-5'>
@@ -33,7 +33,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             type='text'
                             id='movieTitle'
                             className='form-control'
-                            value='{movieTitle}'
+                            value={movieTitle}
                             onChange= {event => {setMovieTitle(event.target.value);}}
                             />
                         </div>
@@ -43,7 +43,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             type='text'
                             id='movieGenre'
                             className='form-control'
-                            value='{movieGenre}'
+                            value={movieGenre}
                             onChange= {event => {setMovieGenre(event.target.value);}}
                             />
                         </div>
@@ -53,7 +53,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             type='text'
                             id='movieYea'
                             className='form-control'
-                            value='{movieYear}'
+                            value={movieYear}
                             onChange= {event => {setMovieYear(event.target.value);}}
                             />
                         </div>
