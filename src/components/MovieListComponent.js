@@ -47,6 +47,9 @@ const MovieListComponent = ({ movies, removeMovie, setMovie }) => {
                                 className='btn btn-danger mb-2'
                                 onClick={() => removeMovie(movie.id)}>Remove
                                 </button>
+                                <button
+                                className='btn btn-outline-warning'
+                                onClick={() => updateMovie(movie)}>Update</button>
                             </td>
                         </tr>
                     );
