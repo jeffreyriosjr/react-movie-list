@@ -1,7 +1,7 @@
 const MovieListComponent = ({ movies, removeMovie, setMovie }) => {
     const showDetails = movieId => {
-        let foundMovies = movies.find(movie => movie.id === movieId);
-        alert(`${foundMovies.titme}: ${foundMovies.genre}`);
+        let foundMovie = movies.find(movie => movie.id === movieId);
+        alert(`${foundMovie.title}: ${foundMovie.genre}`);
       
         };
         const updateMovie = movieFromList => {
