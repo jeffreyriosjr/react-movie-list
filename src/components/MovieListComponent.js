@@ -13,9 +13,9 @@ const MovieListComponent = ({ movies }) => {
         <table className= "table content-table table-dark text-center">
             <thead> 
                 <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Year</th>
-                    <th scope="col">Genre</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Genre</th>
                 </tr>
             </thead>
             
