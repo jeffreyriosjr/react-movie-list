@@ -6,7 +6,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
     const [movieYear, setMovieYear] = useState('');
     const [movieGenre, setMovieGenre] = useState('');
 
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
     event.preventDefault();
     //console.log('submit runs!, event);
     //debugger;
@@ -51,7 +51,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             onChange= {event => setMovieGenre(event.target.value)}
                             />
                         </div>
-                        <div className='form-group'>
+                        <div className='col form-group'>
                             <label htmlFor='movieYear'>Year</label>
                             <input
                             type='text'
@@ -66,9 +66,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                                 <button className='btn btn-success btn-block
                                 '>Save</button>
                             </div>
-                            <div className='col-6 mx-auto'>
-                                <button className='btn btn-danger btn-block'>Delete</button>
-                            </div>
+                            
                         </div>
                     </form>
                 </div>

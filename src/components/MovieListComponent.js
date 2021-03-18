@@ -1,21 +1,22 @@
-const MovieListComponent = ({ movies }) => {
-    const showDetails = (movieId) => {
-        
-        let foundMovies = movies.find((movie) => movie.id === movieId);
-    
-        if(foundMovies) {
-            alert(`${foundMovies.title}`);
-            }else{
-                alert(`Movie details are not found`);
-            }
+const MovieListComponent = ({ movies, removeMovie, setMovie }) => {
+    const showDetails = movieId => {
+        let foundMovies = movies.find(movie => movie.id === movieId);
+        alert(`${foundMovies.titme}: ${foundMovies.genre}`);
+      
         };
+        const updateMovie = movieFromList => {
+            console.log(movieFromList);
+            setMovie(movieFromList);
+          };
+        
+
     return (
         <table className= "table content-table table-dark text-center">
             <thead> 
                 <tr>
-                    <th>Title</th>
-                    <th>Year</th>
-                    <th>Genre</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Genre</th>
                 </tr>
             </thead>
             
@@ -33,15 +34,14 @@ const MovieListComponent = ({ movies }) => {
                             </th>
                             <td>{movie.year}</td>
                             <td>{movie.genre}</td>
-                            <td> 
-                            <a 
-                                href= {movie.movieImage}
-                                rel='noreferrer' 
-                                target='_blank'>
-                                    Billboard
-                                </a>
+                            <td>
+                                <img src={movie.movieImage} alt=''></img>
                             </td>
                             <td>
+                            <button
+                                className='btn btn-danger mb-2'
+                                onClick={() => removeMovie(movie.id)}>Remove
+                                </button>
                                 <button className="btn btn-info btn-block" onClick={() => showDetails(movie.id)}>Info</button>
                             </td>
                         </tr>

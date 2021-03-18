@@ -1,11 +1,9 @@
-import HeadingComponent from './components/Heading';
+import { useState } from 'react';
+
 import MovieListComponent from './components/MovieListComponent';
 import MovieFormComponent from './components/MovieForm'
 
 import 'bootstrap/dist/css/bootstrap.css';
-import { useState } from 'react';
-
-
 
 import './App.css';
 
@@ -17,7 +15,7 @@ import './App.css';
       title: 'Interstellar',
       year: '2014',
       genre: 'science fiction',
-      movieImage: 'https://www.imdb.com/title/tt0816692/mediaviewer/rm4043724800/',
+      movieImage: 'https://tse2.mm.bing.net/th?id=OIP.qeawQLqsPajZg1Y3PHs5IAHaKi&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0816692/',
     },
     {
@@ -25,7 +23,7 @@ import './App.css';
       title: 'Padmaavat',
       year: '2018',
       genre: 'drama, history, romance',
-      movieImage: 'https://www.imdb.com/title/tt5935704/mediaviewer/rm2907263744/',
+      movieImage: 'https://tse3.mm.bing.net/th?id=OIP.C9ZUrcXbjGdkaSbxLZiO7wHaD_&pid=Api&P=0&w=311&h=168',
       imdbLink: 'https://www.imdb.com/title/tt5935704/?ref_=nv_sr_srsg_3',
     },
     {
@@ -33,7 +31,7 @@ import './App.css';
       title: 'Beauty and the Beast',
       year: '1991',
       genre: 'animation, family, fantasy',
-      movieImage: 'https://www.imdb.com/title/tt0101414/mediaviewer/rm3497069824/',
+      movieImage: 'https://tse2.mm.bing.net/th?id=OIP.6YvUB1dEUkJylDJxKMxOeQHaLH&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0101414/?ref_=fn_al_tt_2',
     },
     {
@@ -41,7 +39,7 @@ import './App.css';
       title: 'Casablanca',
       year: '1942',
       genre: 'drama, war, romance',
-      movieImage: 'https://www.imdb.com/title/tt0034583/mediaviewer/rm1220089088/',
+      movieImage: 'https://tse2.mm.bing.net/th?id=OIP.R0gvJC57kJIwKLPANRtx2gHaLH&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0034583/',
     },
     {
@@ -49,7 +47,7 @@ import './App.css';
       title: 'Wall E',
       year: '2008',
       genre: 'animation, adventure, family',
-      movieImage: 'https://www.imdb.com/title/tt0910970/mediaviewer/rm1659211008/',
+      movieImage: 'https://tse3.mm.bing.net/th?id=OIP.L56ak7SnPQjuzLimKRVFwgHaKj&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0910970/?ref_=fn_al_tt_1',
     },
     {
@@ -57,7 +55,7 @@ import './App.css';
       title: 'Vanilla Sky',
       year: '2001',
       genre: 'Fantasy, Mystery, Romance',
-      movieImage: 'https://www.imdb.com/title/tt0259711/mediaviewer/rm1681143808/',
+      movieImage: 'https://tse3.mm.bing.net/th?id=OIP.E5ffZPDI6cuS7-GZoBl7gAHaLH&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0259711/?ref_=fn_al_tt_1',
     },
     {
@@ -65,7 +63,7 @@ import './App.css';
       title: 'Pursuit of Happyness',
       year: '2006',
       genre: 'Biography, Drama',
-      movieImage:'https://www.imdb.com/title/tt0454921/mediaviewer/rm2553318400/',
+      movieImage:'https://tse2.mm.bing.net/th?id=OIP.cOgm_b77wNnbQny92iWy2gHaLA&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0454921/?ref_=nv_sr_srsg_3',
     },
     {
@@ -73,7 +71,7 @@ import './App.css';
       title: 'The Fifth Element',
       year: '1997',
       genre: 'Action, Adventure, Sci-Fi',
-      movieImage: 'https://www.imdb.com/title/tt0119116/mediaviewer/rm2436240384/',
+      movieImage: 'https://tse4.mm.bing.net/th?id=OIP.NW84kFhoNUqe9EcbLobt3QHaLH&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0119116/?ref_=nv_sr_srsg_0',
     },
     {
@@ -81,7 +79,7 @@ import './App.css';
       title: 'Toy Story',
       year: '1995',
       genre: 'Animation, Adventure, Comedy',
-      movieImage: 'https://www.imdb.com/title/tt0114709/mediaviewer/rm3813007616/',
+      movieImage: 'https://tse3.mm.bing.net/th?id=OIP.2HSG8btI9jKB3pl0vO-d8gHaJP&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt0114709/?ref_=fn_al_tt_1',
     },
     {
@@ -89,24 +87,64 @@ import './App.css';
       title: 'Inception',
       year: '2010',
       genre: 'Action, Adventure, Sci-Fi',
-      movieImage: 'https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392/',
+      movieImage: 'https://tse1.mm.bing.net/th?id=OIP.6WES5nhdyXVDPrxHG0vCvgHaKz&pid=Api&P=0&w=300&h=300',
       imdbLink: 'https://www.imdb.com/title/tt1375666/?ref_=fn_al_tt_1',
     },
   ];
 
     const App = () => {
       const [movies, setMovies] = useState(moviesData);
-      let title = 'Anna & Jeffreys Movie List!';
-      
+      const [movie, setMovie] = useState({
+      id: '',
+      title: '',
+      year: '',
+      genre: '',
+      movieImage: '',
+      imdbLink: '',
 
-    const addNewMovie = movie => {
-      setMovies([...movies, movie])
+      });
+      
+    const addNewMovie = () => {
+      if (movie.id) {
+        console.log(`this movie has an id, the name is ${movie.title}`);
+        let updatedMovies = movies.filter(m => m.id !== movie.id);
+        updatedMovies.push(movie);
+        setMovies(updatedMovies);
+      } else {
+        movie.id = Date.now();
+        setMovies([...movies, movie]);
+      }
+      setMovie({
+        id: '',
+        name: '',
+        year: '',
+        genre: '',
+        description: '',
+        imdbRating: '',
+        imageLink: '',
+        imdbLink: '',
+      });
+      
     };
+    const removeMovie = movieId => {
+      if (window.confirm('Are you sure you want to remove this movie?')) {
+        let newMovies = movies.filter(m => m.id !== movieId);
+        console.log(newMovies);
+        setMovies(newMovies);
+      }
+    };
+    
+
   return (
     <div className="container">
-      <HeadingComponent  title={title}/>
-      <MovieListComponent  movies={movies}/>
-      <MovieFormComponent addNewMovie={addNewMovie} />
+      <div className="row text-center">
+        <div className="col">
+          <h1>Anna and Jeffreys Movie List!</h1>
+        </div>
+      </div>
+      
+      <MovieListComponent  movies={movies} removeMovie={removeMovie} setMovie={setMovie}/>
+      <MovieFormComponent addNewMovie={addNewMovie} movie={movie} setMovie={setMovie} />
       
       
     </div>
