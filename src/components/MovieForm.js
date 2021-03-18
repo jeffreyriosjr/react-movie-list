@@ -1,44 +1,25 @@
 import { useState } from 'react';
 
-const MovieFormComponent = ({ addNewMovie }) => {
-  // initialize my variable and state hooks first
-    const [movieTitle, setMovieTitle] = useState('');
-    const [movieYear, setMovieYear] = useState('');
-    const [movieGenre, setMovieGenre] = useState('');
-
-    const handleSubmit = (event) => {
+const MovieFormComponent = ({ movie, setMovie, addNewMovie, }) => {
+    const handleSubmit = event => {
     event.preventDefault();
     //console.log('submit runs!, event);
     //debugger;
+     addNewMovie();   
+    };
 
-    //create a new movie object
-    //then save to my movies array
-    let newMovie = {
-        title: movieTitle,
-        year: movieYear,
-        genre: movieGenre,
-    };
-        //console.log(newMovie);
-        addNewMovie(newMovie);
-        clearForm();
-    };
-    const clearForm = () => {
-        setMovieTitle('');
-        setMovieYear('');
-        setMovieGenre('');
-    };
     return(
             <div className='row mb-5'>
                 <div className='col-6 offset-3'>
                     <form action='submit' id='movie-form' onSubmit={handleSubmit}>
                         <div className='form-group'>
-                            <label htmlFor='movieTitle'>Title</label>
+                            <label htmlFor='movieTitle'>Movie Title</label>
                             <input
                             type='text'
                             id='movieTitle'
                             className='form-control'
-                            value={movieTitle}
-                            onChange= {event => {setMovieTitle(event.target.value);}}
+                            value={movie.title}
+                            onChange= {event => {setMovie({ ...movie, title: event.target.value });}}
                             />
                         </div>
                         <div className='form-group'>
@@ -47,27 +28,24 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             type='text'
                             id='movieGenre'
                             className='form-control'
-                            value={movieGenre}
-                            onChange= {event => setMovieGenre(event.target.value)}
+                            value={movie.genre}
+                            onChange= {event => setMovie({ ...movie, genre: event.target.value})}
                             />
                         </div>
-                        <div className='col form-group'>
+                        <div className='form-group'>
                             <label htmlFor='movieYear'>Year</label>
                             <input
                             type='text'
                             id='movieYear'
                             className='form-control'
-                            value={movieYear}
-                            onChange= {event => {setMovieYear(event.target.value);}}
+                            value={movie.year}
+                            onChange= {event => {setMovie({ ...movie, year: event.target.value })
+                        }}
                             />
                         </div>
-                        <div className='row'>
-                            <div className= 'col-6 mx-auto'>
-                                <button className='btn btn-success btn-block
-                                '>Save</button>
-                            </div>
-                            
-                        </div>
+                        
+                         <button className='btn btn-success btn-block'>Save</button>
+    
                     </form>
                 </div>
             </div>

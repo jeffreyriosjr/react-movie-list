@@ -14,9 +14,12 @@ const MovieListComponent = ({ movies, removeMovie, setMovie }) => {
         <table className= "table content-table table-dark text-center">
             <thead> 
                 <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Year</th>
-                    <th scope="col">Genre</th>
+                    <th className="col">Title</th>
+                    <th className= "col">Year</th>
+                    <th className = "col">Genre</th>
+                    <th className="col">Pic</th>
+                    <th className="col">Info</th>
+                    
                 </tr>
             </thead>
             
@@ -38,11 +41,12 @@ const MovieListComponent = ({ movies, removeMovie, setMovie }) => {
                                 <img src={movie.movieImage} alt=''></img>
                             </td>
                             <td>
-                            <button
+                            
+                                <button className="btn btn-info btn-block mb-2" onClick={() => showDetails(movie.id)}>Info</button>
+                                <button
                                 className='btn btn-danger mb-2'
                                 onClick={() => removeMovie(movie.id)}>Remove
                                 </button>
-                                <button className="btn btn-info btn-block" onClick={() => showDetails(movie.id)}>Info</button>
                             </td>
                         </tr>
                     );
