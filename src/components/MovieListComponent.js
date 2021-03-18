@@ -33,11 +33,13 @@ const MovieListComponent = ({ movies }) => {
                             </th>
                             <td>{movie.year}</td>
                             <td>{movie.genre}</td>
-                            <td>
-                                <img 
-                                    src={movie.movieImage} alt="movie">
-
-                                </img>
+                            <td> 
+                            <a 
+                                href= {movie.movieImage}
+                                rel='noreferrer' 
+                                target='_blank'>
+                                    Billboard
+                                </a>
                             </td>
                             <td>
                                 <button className="btn btn-info btn-block" onClick={() => showDetails(movies.id)}>Info</button>

@@ -8,7 +8,11 @@ const MovieFormComponent = ({ addNewMovie }) => {
 
     const handleSubmit = event => {
     event.preventDefault();
+    //console.log('submit runs!, event);
     //debugger;
+
+    //create a new movie object
+    //then save to my movies array
     let newMovie = {
         title: movieTitle,
         year: movieYear,
@@ -51,7 +55,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             <label htmlFor='movieYear'>Year</label>
                             <input
                             type='text'
-                            id='movieYea'
+                            id='movieYear'
                             className='form-control'
                             value={movieYear}
                             onChange= {event => {setMovieYear(event.target.value);}}
