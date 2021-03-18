@@ -10,12 +10,12 @@ const MovieListComponent = ({ movies }) => {
             }
         };
     return (
-        <table className= "box content-table table-dark text-center">
+        <table className= "table content-table table-dark text-center">
             <thead> 
                 <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Year</th>
-                    <th scope="col">Genre</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Genre</th>
                 </tr>
             </thead>
             
@@ -42,7 +42,7 @@ const MovieListComponent = ({ movies }) => {
                                 </a>
                             </td>
                             <td>
-                                <button className="btn btn-info btn-block" onClick={() => showDetails(movies.id)}>Info</button>
+                                <button className="btn btn-info btn-block" onClick={() => showDetails(movie.id)}>Info</button>
                             </td>
                         </tr>
                     );

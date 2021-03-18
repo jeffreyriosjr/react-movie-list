@@ -48,7 +48,7 @@ const MovieFormComponent = ({ addNewMovie }) => {
                             id='movieGenre'
                             className='form-control'
                             value={movieGenre}
-                            onChange= {event => {setMovieGenre(event.target.value);}}
+                            onChange= {event => setMovieGenre(event.target.value)}
                             />
                         </div>
                         <div className='form-group'>
