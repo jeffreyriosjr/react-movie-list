@@ -4,7 +4,7 @@ body{
   color: aliceblue;
   background-image: url(bgPic.png);
   background-position:center;
-  background-size: contain;
+  background-size: 65%;
   
   background-repeat: no-repeat;
   background-attachment:fixed;
@@ -27,6 +27,9 @@ h1{
   
 }
 a{
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
   color: rgb(1, 1, 1);
 }
 .btn{
